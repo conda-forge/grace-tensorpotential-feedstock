@@ -21,7 +21,6 @@ requirements:
     - wheel
     - pip
   run:
-    - tf_keras
     - python >={{ python_min }}
     - scipy
     - tensorflow <2.20
