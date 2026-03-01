@@ -1,5 +1,5 @@
 {% set name = "grace-tensorpotential" %}
-{% set version = "0.5.7" %}
+{% set version = "0.5.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/tensorpotential/tensorpotential-{{ version }}.tar.gz
-  sha256: ea997d607d58e3249c89507c182a49a2ea06f26c35aa6776ac9f75315320c4e2
+  sha256: a9fdbffd9d6463977cc6a54f7b04ceccd615e67037da4ad7c5a8451140ff5c86
 
 build:
   noarch: python
