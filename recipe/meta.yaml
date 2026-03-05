@@ -1,5 +1,5 @@
 {% set name = "grace-tensorpotential" %}
-{% set version = "0.5.7.2" %}
+{% set version = "0.5.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/tensorpotential/tensorpotential-{{ version }}.tar.gz
-  sha256: a9fdbffd9d6463977cc6a54f7b04ceccd615e67037da4ad7c5a8451140ff5c86
+  sha256: 0ef216ae92df790093d4bdb529d09544d5001417b4d3462057a8b4bdad3705e3
 
 build:
   noarch: python
@@ -21,6 +21,8 @@ requirements:
     - wheel
     - pip
   run:
+    - questionary >=2.0
+    - rich >=13.0
     - python >={{ python_min }}
     - scipy
     - tensorflow <2.20
