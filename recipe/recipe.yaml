@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  name: grace-tensorpotential
+  version: "0.5.9"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/t/tensorpotential/tensorpotential-${{ version }}.tar.gz
+  sha256: 595d31c6993bf1fa2c34fd9c0b1876b66141b893add838c960f9f1e3c4464d26
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=61.0.0
+    - wheel
+    - pip
+  run:
+    - questionary >=2.0
+    - rich >=13.0
+    - python >=${{ python_min }}
+    - scipy
+    - tensorflow <2.20
+    - tf-keras
+    - matscipy
+    - numpy <3.0.0
+    - sympy
+    - pandas <3.0.0
+    - ase
+    - pyyaml >=6.0.2
+    - tqdm
+
+tests:
+  - python:
+      imports:
+        - tensorpotential
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: Graph Atomic Cluster Expansion (GRACE)
+  license: ADSL
+  license_file: ASL.txt
+  homepage: https://github.com/ICAMS/grace-tensorpotential
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
