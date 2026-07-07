@@ -37,6 +37,7 @@ requirements:
     - ase
     - pyyaml >=6.0.2
     - tqdm
+    - scikit-learn
 
 tests:
   - python:
