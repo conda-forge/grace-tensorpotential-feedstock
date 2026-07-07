@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: grace-tensorpotential
-  version: "0.5.9"
+  version: "0.6.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/tensorpotential/tensorpotential-${{ version }}.tar.gz
-  sha256: 595d31c6993bf1fa2c34fd9c0b1876b66141b893add838c960f9f1e3c4464d26
+  sha256: 7f727bc2e975149144fb7a9375c77c62d7f7b72bc309aad0f197f72ddeaa7e77
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
